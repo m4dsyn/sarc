@@ -1,6 +1,5 @@
-#include "stdio.h"
 #include <fstream>
-#include <string>
+#include "define.hpp"
 #include "opcode.hpp"
 
 
@@ -11,14 +10,14 @@ int main (int argc, char **argv) {
 
     }
 
-    
+
     ifstream in_fp (argv [1]);
     if (!in_fp.is_open ()) {
         printf ("Fatal error: cannot open in file.\nExec terminated.");
         return 1;
     }
 
-    
+
     ifstream out_fp;
     // TODO: change this terrible thing to arg parsing
     if (argc > 3 && !strcmp (argc [2], "-o")) {
@@ -34,7 +33,7 @@ int main (int argc, char **argv) {
     while (size_t len = fread(buf, 1, sizeof(buf), input_fp)) {
 
     }
-    
+
 
     fclose (input_fp);
     fclose (output_fp);
