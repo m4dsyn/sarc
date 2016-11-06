@@ -3,6 +3,7 @@
 #include "opcode.hpp"
 
 
+
 int main (int argc, char **argv) {
     if (argc < 2) {
         printf ("Fatal error: no input file.\nExec terminated.");
